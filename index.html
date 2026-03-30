@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextGen Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#020617);
+    color:white;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+}
+
+nav h2{
+    color:#22c55e;
+}
+
+nav input{
+    padding:8px 15px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+}
+
+/* Hero */
+.hero{
+    height:60vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:45px;
+    background:linear-gradient(90deg,#22c55e,#3b82f6);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    margin-top:10px;
+    opacity:0.8;
+}
+
+/* Categories */
+.categories{
+    display:flex;
+    gap:15px;
+    padding:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.cat{
+    padding:10px 20px;
+    background:#1e293b;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cat:hover{
+    background:#22c55e;
+}
+
+/* Section title */
+.section-title{
+    padding-left:40px;
+    margin-top:20px;
+    font-size:24px;
+}
+
+/* Products */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:20px 40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    padding:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.price{
+    color:#22c55e;
+    font-weight:bold;
+}
+
+.btn{
+    display:block;
+    margin-top:10px;
+    padding:10px;
+    background:#22c55e;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    margin-top:30px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>NextGen Store</h2>
+    <input placeholder="Search products...">
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <h1>Shop Smart. Live Better.</h1>
+    <p>Mobiles, Laptops, Electronics, Fashion & more</p>
+</div>
+
+<!-- Categories -->
+<div class="categories">
+    <div class="cat">Mobiles</div>
+    <div class="cat">Laptops</div>
+    <div class="cat">Electronics</div>
+    <div class="cat">Fashion</div>
+</div>
+
+<!-- Mobiles -->
+<h2 class="section-title">📱 Mobiles</h2>
+<div class="products">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+        <h3>iPhone Style Phone</h3>
+        <p class="price">₹79,999</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505">
+        <h3>Android Phone</h3>
+        <p class="price">₹19,999</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Laptops -->
+<h2 class="section-title">💻 Laptops</h2>
+<div class="products">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+        <h3>MacBook Style</h3>
+        <p class="price">₹89,999</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://imgs.search.brave.com/g2f-wYRFd6OUdOg-VnNixxoMLDAkPJJ8K_H4uAqLAU8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L2N5/VVBSRlVQQkRtN3pi/SlJyeGpTYk4uanBn">
+        <h3>Gaming Laptop</h3>
+        <p class="price">₹65,999</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Electronics -->
+<h2 class="section-title">🎧 Electronics</h2>
+<div class="products">
+    <div class="card">
+        <img src="https://imgs.search.brave.com/bI5HKsLMOERCYoxTG-v8hf3SubadkK_6BnxGTrhwHIw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9zYW1w/bGVzLWFwcGxlLWhl/YWRwaG9uZXMtc2Ft/cGxlcy1hcHBsZS1o/ZWFkcGhvbmVzLWNs/b3NldXAtcGhvdG8t/MzY5MzkzODYyLmpw/Zw">
+        <h3>Headphones</h3>
+        <p class="price">₹2,999</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://imgs.search.brave.com/C1he_vlPRxFhKnMOlMRA4OG4Td7dDPqs-gD5LCjO0a4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29tcGFyb3MuaW4v/X25leHQvaW1hZ2U_/dXJsPWh0dHBzOi8v/ZDFvZGdic3Z2eGwy/cWQuY2xvdWRmcm9u/dC5uZXQvQXBwbGVf/V2F0Y2hfVWx0cmFf/Ml9hNzkwMGQzZTdj/LnBuZyZ3PTM4NDAm/cT01">
+        <h3>Smart Watch</h3>
+        <p class="price">₹4,999</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Fashion -->
+<h2 class="section-title">👕 Fashion</h2>
+<div class="products">
+    <div class="card">
+        <img src="https://imgs.search.brave.com/qPqj35A-RjGYHhuD6IE8u0SpsL1uKEr9j0l0Pxc3YpI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/d2luZ3MyZmFzaGlv/bi5jb20vYmxvZ3Mv/d3AtY29udGVudC91/cGxvYWRzLzIwMTgv/MTAvTG91aXMtVnVp/dHRvbi0yOTh4MzAw/LmpwZw">
+        <h3>T-Shirt</h3>
+        <p class="price">₹799</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://imgs.search.brave.com/JDsxToTeO4MCUlheVIraOrPP18mPQrh1qEBHVE4HgwM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/OTA5Nzc1Ny9waG90/by93aGl0ZS1zcG9y/dC1zbmVha2Vycy1z/aG9lcy1vbi10aGUt/dmlvbGV0LWJhY2tn/cm91bmQtZml0bmVz/cy1iYWNrZ3JvdW5k/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1BX2Yzd3BSTnl0/MzgyeEdXVVppbXp6/RWVma0c0d2VGaUhy/R0ZXbGZJWkJZPQ">
+        <h3>Sneakers</h3>
+        <p class="price">₹2,499</p>
+        <button class="btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 Ajay NextGen Store | Built by You 🚀
+</footer>
+
+</body>
+</html>
